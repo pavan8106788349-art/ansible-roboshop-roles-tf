@@ -1,24 +1,3 @@
-#  - name: install MySQL server
-#    ansible.builtin.dnf:
-#     name: mysql-server
-#     state: present
-
-# -  name: start and enable mysql server
-#    ansible.builtin.service:
-#     name: mysqld
-#     state: restarted
-#     enabled: yes
-
-# -  name: install botocore and boto3
-#    ansible.builtin.pip:
-#     name: "{{ item }}"
-#     executable: pip3.9
-#    loop:
-#   - boto3
-#   - botocore
-
-# -  name: setup root password
-#    ansible.builtin.command: mysql_secure_installation --set-root-pass "{{ MYSQL_ROOT_PASSWORD }}"
 
 - name: install MySQL server
   ansible.builtin.dnf:
@@ -42,3 +21,10 @@
 - name: setup root password
   # ansible.builtin.command: mysql_secure_installation --set-root-pass "{{ MYSQL_ROOT_PASSWORD }}"
   ansible.builtin.command: mysql_secure_installation --set-root-pass "{{ lookup('amazon.aws.aws_ssm', '/roboshop/{{ env }}/mysql_root_password', region='us-east-1', decrypt=True) }}"
+
+
+
+
+
+
+
