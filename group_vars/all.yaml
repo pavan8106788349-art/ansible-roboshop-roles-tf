@@ -9,3 +9,4 @@ MYSQL_HOST: mysql-{{ env }}.daws88s.quest
 SHIPPING_HOST: shipping-{{ env }}.daws88s.quest
 RABBITMQ_HOST: rabbitmq-{{ env }}.daws88s.quest
 PAYMENT_HOST: payment-{{ env }}.daws88s.quest
+app_version: v3
