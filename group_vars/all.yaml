@@ -10,3 +10,4 @@ CART_HOST: cart.backend-alb-{{ env }}.daws88s.quest
 SHIPPING_HOST: shipping.backend-alb-{{ env }}.daws88s.quest
 PAYMENT_HOST: payment.backend-alb-{{ env }}.daws88s.quest
 app_version: v3
+
